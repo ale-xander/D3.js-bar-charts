@@ -1,6 +1,26 @@
 console.log('lol')
 
-const svg = d3.select('svg');
+const margin = {
+    top: 20,
+    right: 20,
+    bottom: 100,
+    left: 100
+}
+
+
+const svg = d3.select('.canvas')
+                .append('svg')
+                .attr('width', 600)
+                .attr('height', 600);
+
+
+const graphWidth = 600 - margin.left - margin.right;
+const graphHeight = 600 - margin.top - margin.bottom;
+const graph = svg.append('g')
+                .attr('width', graphWidth)
+                .attr('height', graphHeight)
+                .attr('transform', `translate(${margin.left}, ${margin.top})`)
+
 d3.json('menu.json').then(data => {
 
     const y = d3.scaleLinear()
@@ -24,7 +44,7 @@ d3.json('menu.json').then(data => {
         console.log(x.bandwidth())
   
     // join the data to circs
-    const rects = svg.selectAll('rect')
+    const rects = graph.selectAll('rect') // switch svg.selectAll to graph.selectAll
       .data(data);
   
     // add attrs to circs already in the DOM
