@@ -14,5 +14,37 @@
     {
       "name": "veg surprise",
       "orders": 900
+    },
+    {
+      "name": "beef soup",
+      "orders": 250
+    },
+    {
+      "name": "beef curry",
+      "orders": 700
+    },
+    {
+      "name": "beef pasta",
+      "orders": 400
+    },
+    {
+      "name": "beef surprise",
+      "orders": 500
+    },
+    {
+      "name": "soup",
+      "orders": 70
+    },
+    {
+      "name": "curry",
+      "orders": 50
+    },
+    {
+      "name": "pasta",
+      "orders": 30
+    },
+    {
+      "name": "surprise",
+      "orders": 10
     }
   ]
